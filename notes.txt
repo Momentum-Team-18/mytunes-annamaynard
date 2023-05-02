@@ -1,0 +1,41 @@
+Notes :
+
+
+
+-request data from iTunes API 
+- 
+
+
+
+      //for (let customer of customers){
+
+//     let customerCard = document.createElement('div');
+
+//     let customerImg = document.createElement('img');
+//     customerImg.src = customer.picture.medium;
+//     customerImg.classList.add("customerImg");
+//     // apply style to a class in css first, then add that class to the element with JS
+//     customerCard.appendChild(customerImg);
+
+//     let customerName = document.createElement('h2');
+//     customerName.innerText = `${customer.name.first} ${customer.name.last}`;
+//     customerName.classList.add("customerName");
+//     customerCard.appendChild(customerName);
+
+      
+// // })
+
+
+
+
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (data) {
+//     console.log("You are Perfect", data);
+//   });
+
+
+
+// HTML
+
