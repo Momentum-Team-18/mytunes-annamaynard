@@ -42,15 +42,16 @@ fetch(searchUrl, {
       artistImage.src = song.artworkUrl30
       songCard.appendChild(artistImage);
 
-      // let previewUrl = document.createElement("h2");
-      // previewUrl.innerText = `${preview.previewUrl}`;
-      // songCard.appendChild(previewUrl);
+      
+      songCard.appendChild(preview)
 
       console.log(trackName);
       songCard.appendChild(trackName);
       resultsDiv.appendChild(songCard);
 
       console.log(trackName);
+
+      
     }
   });
 
