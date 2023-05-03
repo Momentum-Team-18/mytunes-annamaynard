@@ -1,9 +1,18 @@
 let resultsDiv = document.querySelector("#resultsDiv");
+let searchBar = document.querySelector("#searchBar");
+let searchForm = document.querySelector("#searchForm");
+let itunesUrl = "https://proxy-itunes-api.glitch.me/search?term=";
 
-let iTunesUrl = "https://proxy-itunes-api.glitch.me/search?term=jason+derulo";
-console.log;
 
-fetch(iTunesUrl, {
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(searchBar.value);
+  let searchUrl = `${itunesUrl}${searchBar.value}`;
+  console.log(searchUrl);
+
+
+fetch(searchUrl, {
   method: "GET",
   headers: { "Content-Type": "application/json" },
 })
@@ -15,11 +24,10 @@ fetch(iTunesUrl, {
   // parsedResponse - the thing having been read
   // you can use any word
   .then((parsedResponse) => {
-    //   console.log(parsedResponse.results)
+      console.log(parsedResponse)
 
     for (let song of parsedResponse.results) {
-      // goal is to console.log a list of Jason Derulo songs and show up on index.html
-
+     
       let songCard = document.createElement("div");
 
       let artistName = document.createElement("div");
@@ -33,7 +41,11 @@ fetch(iTunesUrl, {
       let artistImage = document.createElement("img");
       artistImage.src = song.artworkUrl30
       songCard.appendChild(artistImage);
-      
+
+      // let previewUrl = document.createElement("h2");
+      // previewUrl.innerText = `${preview.previewUrl}`;
+      // songCard.appendChild(previewUrl);
+
       console.log(trackName);
       songCard.appendChild(trackName);
       resultsDiv.appendChild(songCard);
@@ -41,3 +53,5 @@ fetch(iTunesUrl, {
       console.log(trackName);
     }
   });
+
+})

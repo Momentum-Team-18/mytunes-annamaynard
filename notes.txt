@@ -1,41 +1,36 @@
 Notes :
 
+- addEventlistner  --- search input 
+                       search button 
 
 
--request data from iTunes API 
-- 
+- results show up in gird 
 
 
+- add audio player (in hero section?)
 
-      //for (let customer of customers){
 
-//     let customerCard = document.createElement('div');
-
-//     let customerImg = document.createElement('img');
-//     customerImg.src = customer.picture.medium;
-//     customerImg.classList.add("customerImg");
-//     // apply style to a class in css first, then add that class to the element with JS
-//     customerCard.appendChild(customerImg);
-
-//     let customerName = document.createElement('h2');
-//     customerName.innerText = `${customer.name.first} ${customer.name.last}`;
-//     customerName.classList.add("customerName");
-//     customerCard.appendChild(customerName);
-
-      
-// // })
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(searchInput.value);
+  let searchUrl = `${searchBaseUrl}${searchInput.value}`;
+  console.log(searchUrl);
+  fetch(searchUrl, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
 
 
 
-
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     console.log("You are Perfect", data);
-//   });
+      // previewUrl
 
 
+// var audio = new Audio('${}');
+// audio.play();
 
-// HTML
 
+  // parentContainer.addEventListener("click", (event) => {
+  // if(event.target.tagName === 'BUTTON') {
+  //   console.log("button was clicked")
+  // }
+// event delegation
