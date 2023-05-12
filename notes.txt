@@ -1,0 +1,36 @@
+Notes :
+
+- addEventlistner  --- search input 
+                       search button 
+
+
+- results show up in gird 
+
+
+- add audio player (in hero section?)
+
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(searchInput.value);
+  let searchUrl = `${searchBaseUrl}${searchInput.value}`;
+  console.log(searchUrl);
+  fetch(searchUrl, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+
+
+
+      // previewUrl
+
+
+// var audio = new Audio('${}');
+// audio.play();
+
+
+  // parentContainer.addEventListener("click", (event) => {
+  // if(event.target.tagName === 'BUTTON') {
+  //   console.log("button was clicked")
+  // }
+// event delegation

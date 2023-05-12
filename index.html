@@ -4,8 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+ <link
+ rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+/>
+<script
+ src="https://kit.fontawesome.com/fafb3d4cf1.js"
+ crossorigin="anonymous"
+></script>
+
   <title>Music Search</title>
 </head>
 <body>
+<div id="parentContainer">
+
+ <section class="hero is-danger">
+  <div class="hero-body">
+    <p class="title">Search for a  Jason Derolo song!</p>
+    <br>
+    <p class="subtitle">What's the vibe you are feelin???</p>
+  </div>
+  <div id="audioPlayerDiv">
+  
+    <audio controls
+      src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/8a/58/09/8a5809ce-3991-8c48-29bf-946df0a0ca22/mzaf_3911248908699649435.plus.aac.p.m4a" />
+    </audio>
+    
+  </div>
+
+</section>
+
+<form id="searchForm">
+  
+<input
+  id="searchBar"
+  name="searchBar"
+  class="input is-medium"
+  type="text"
+  placeholder="Search"
+/>
+<button id="search-input" class="button">Search</button>
+</form>
+
+
+<div id="resultsDiv"></div>
+<div id="grid-item"></div>
+
+
+</div>
+
+
 </body>
 </html>
